@@ -11,14 +11,16 @@ const Board = () => {
             {/** 값이 여러개 일 경우 배열을 가져와 map으로 출력 */}
             {
                 boardlist.map((boardid)=>(
-                    <NavLink
-                    //MaveLink에 isActive 값을 화살표 함수로 가지고 와서 사용 
-                    style={({isActive})=> isActive ? {color:"pink"} : {color:"green"}} 
-                    to={`/board/${boardid}`}>{boardid}{" "}</NavLink>
-                    )
+                    <NavLink 
+                    // NavLink에 isActive 값을 화살표 함수로 가져와서 사용
+                    // isPending 뜻 : 보류중
+                    style={ ({isActive })=> isActive ? {color:"blue"} : {color:"black"} }
+                    to={`/board/${boardid}`}>
+                        {boardid}{" "}
+                    </NavLink>)
                 )
             }
-           <Outlet outletname="아울렛" />
+            <Outlet outletname="아울렛" />
         </div>
      );
 }

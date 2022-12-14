@@ -37,15 +37,7 @@
   }
 }
 
-
-a{
+/* Link관한 디자인은 a태그를 수정 */
+a {
   text-decoration: none;
-  color: palevioletred;
-  transition: all ease 1s 0s;
-  font-weight: bold;
-}
-
-a:hover{
-  text-decoration: none;
-  background-color: lightblue;
 }
